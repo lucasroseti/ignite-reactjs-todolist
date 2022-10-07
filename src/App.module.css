@@ -1,3 +1,43 @@
+.wrapper {
+  max-width: calc(46rem + 2rem);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: -2rem auto 2rem;
+  padding: 0 1rem;
+}
+
+.content {
+  margin: 4rem 0 2rem;
+}
+
+.content header {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.content h3 {
+  color: var(--blue);
+  font-weight: 700;
+  font-size: 0.875rem;
+  line-height: 1.6rem;
+}
+
+.content h3 + h3 {
+  color: var(--purple)
+}
+
+.content span {
+  background-color: var(--gray-400);
+  color: var(--white);
+  font-size: 0.75rem;
+  border: 0;
+  border-radius: 999px;
+  padding: 0.125rem 0.5rem;
+  margin-left: 0.5rem;
+}
+
 @media (max-width: 768px) {
   html {
     font-size: 87.5%;
