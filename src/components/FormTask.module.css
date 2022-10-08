@@ -51,3 +51,22 @@
   font-size: 1.3rem;
   font-weight: 700;
 }
+
+/* Mobile */
+@media (min-width: 301px) and (max-width: 1020px) {
+  .formTask button[type="submit"] span {
+    position: absolute;
+    visibility: hidden;
+  }
+}
+
+/* Fold device */
+@media (max-width: 300px) {
+  .formTask {
+    flex-direction: column;
+  }
+
+  .formTask button[type="submit"] {
+    padding: 0.875rem;
+  }
+}

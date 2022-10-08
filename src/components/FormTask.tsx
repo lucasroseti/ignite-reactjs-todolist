@@ -37,7 +37,7 @@ export function FormTask({ createNewTask }: FormTaskProps) {
         onInvalid={handleNewTaskInvalid}
       />
       <button type="submit" disabled={isNewTaskEmpty}>
-        Criar <PlusCircle />
+        <span>Criar</span> <PlusCircle />
       </button>
     </form>
   )
