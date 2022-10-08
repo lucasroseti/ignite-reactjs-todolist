@@ -54,6 +54,7 @@
 }
 
 .task span {
+  flex: 1;
   color: var(--gray-100);
   font-size: 0.875rem;
   font-weight: 400;
