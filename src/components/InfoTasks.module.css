@@ -1,0 +1,27 @@
+.info {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.info h3 {
+  color: var(--blue);
+  font-weight: 700;
+  font-size: 0.875rem;
+  line-height: 1.6rem;
+}
+
+.info h3 + h3 {
+  color: var(--purple)
+}
+
+.info span {
+  background-color: var(--gray-400);
+  color: var(--white);
+  font-size: 0.75rem;
+  border: 0;
+  border-radius: 999px;
+  padding: 0.125rem 0.5rem;
+  margin-left: 0.5rem;
+}
