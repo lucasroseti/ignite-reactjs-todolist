@@ -1,13 +1,10 @@
 import { useState } from 'react'
+import { v4 as uuidv4 } from 'uuid'
 
-import { EmptyTasks } from './components/EmptyTasks'
-import { FormTask } from './components/FormTask'
-import { Header } from './components/Header'
-import { InfoTasks } from './components/InfoTasks'
+import { EmptyTasks, FormTask, Header, InfoTasks, Task } from './components'
 
 import styles from './App.module.css'
 import './global.css'
-import { Task } from './components/Task'
 
 type Task = {
   id: string
@@ -40,9 +37,16 @@ export function App() {
     setTasks([...taskWithoutDeletedOne])
   }
 
+  function editTask(idTaskToEdit: string, newContentTask: string) {
+    setTasks(tasks.map(task => {
+      if (task.id === idTaskToEdit) task.content = newContentTask
+      return task
+    }))
+  }
+
   function handleNewTaskFormatData(newTask: string) {
     return {
-      id: (tasks.length+1).toString(),
+      id: uuidv4(),
       content: newTask,
       isComplete: false
     }
@@ -69,6 +73,7 @@ export function App() {
                     isComplete={task.isComplete}
                     onChangeTaskIsComplete={changeTaskIsComplete}
                     onDeleteTask={deleteTask}
+                    onEditTask={editTask}
                   />
                 ))}
               </>
